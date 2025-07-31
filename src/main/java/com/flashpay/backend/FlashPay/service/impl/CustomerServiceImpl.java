@@ -67,6 +67,4 @@ public class CustomerServiceImpl implements CustomerService {
         Customer deactivedCustomer = customerRepository.save(customer);
         return customerMapper.mapToCustomerDto(deactivedCustomer);
     }
-
-
 }

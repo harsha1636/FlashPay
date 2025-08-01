@@ -2,13 +2,16 @@ package com.flashpay.backend.FlashPay.service;
 
 import com.flashpay.backend.FlashPay.dto.CustomerDTO;
 
-public class CustomerService {
+import java.util.List;
 
+public interface CustomerService {
+
+    List<CustomerDTO> createBatch (List<CustomerDTO> customerDTOList);
     CustomerDTO createCustomer(CustomerDTO customerDTO);
-    EmployeeDto getEmployeeById(Long employeeId);
-    List<EmployeeDto> getAllEmployees();
-    EmployeeDto updateEmployee(Long employeeId, EmployeeDto updatedEmployee);
-    void deleteEmployee(Long employeeId);
+    CustomerDTO getCustomerById(String customerId);
+    List<CustomerDTO> getAllCustomers();
+    CustomerDTO updateCustomer(String customerId, CustomerDTO updatedCustomer);
+    void deactivateCustomer(String customerId);
 
 }
 
